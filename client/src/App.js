@@ -56,6 +56,7 @@ import PaymentSuccess from "./components/Job/Post/Components/PaymentSuccess";
 import PublicProfilePage from "./components/Dashboard/Applicant/Components/PublicProfilePage";
 import NotFound from "./components/NotFound";
 import NotAuthorized from "./components/NotAuthorized";
+import ReactGA from "react-ga4";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -68,6 +69,10 @@ function App() {
   // State to control the modal
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalType, setModalType] = useState(null);
+  useEffect(() => {
+    // Track page view with GA4
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
   useEffect(() => {
     if (user && user.isActive) {
       setModalOpen(false);
