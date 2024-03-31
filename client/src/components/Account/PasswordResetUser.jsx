@@ -22,9 +22,7 @@ function PasswordResetUser() {
 
     if (email) {
       const action =
-        selectedRole === "Job Poster Account"
-          ? forgotPassword
-          : forgotPasswordS;
+        selectedRole === "poster" ? forgotPassword : forgotPasswordS;
       try {
         dispatch(action(email));
         toast.success("Password reset link sent to your email");

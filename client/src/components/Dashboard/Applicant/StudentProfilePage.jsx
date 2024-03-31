@@ -132,7 +132,7 @@ function HeaderBlock({ formData, setFormData, profiles }) {
   return (
     <>
       {/* HEADER */}
-      <div className=" header flex flex-col gap-12 rounded-xl shadow-[rgba(0,_0,_0,_0.1)0px_1px_5px] relative z-0">
+      <div className=" header flex flex-col gap-12 rounded-xl shadow-[rgba(0,_0,_0,_0.15)0px_1px_5px] relative z-0">
         <span className="banner relative ">
           <span className="h-[216px] w-[1584px]">
             <img
@@ -336,7 +336,21 @@ function HeaderBlock({ formData, setFormData, profiles }) {
                     </h1>
                   </span>
                 </>
-              ) : null}
+              ) : (
+                <>
+                  <span className="headerContentLeft w-full sm:w-2/3 space-y-1 text-gray-500">
+                    <h1 className="name text-[20px] font-Poppins font-semibold">
+                      Full Name
+                    </h1>
+                    <h1 className="headline text-[15px] font-Poppins font-normal">
+                      A catch Headline
+                    </h1>
+                    <h1 className="location text-[13px] font-Poppins pt-2">
+                      Your location
+                    </h1>
+                  </span>
+                </>
+              )}
               {formData?.education?.uniName !== undefined &&
               formData.education.uniName.trim() !== "" ? (
                 <span className="headerContentRight w-full sm:w-1/3 flex flex-col justify-evenly items-center">
@@ -2096,7 +2110,7 @@ function StudentProfilePage({ profiles }) {
                       <FaFileAlt size={22} /> View CV
                     </a>
                   ) : (
-                    <h1 className="text-[15px] font-Poppins font-normal text-center ">
+                    <h1 className="text-[15px] font-Poppins text-center font-bold text-red-600 underline">
                       No CV uploaded
                     </h1>
                   )}

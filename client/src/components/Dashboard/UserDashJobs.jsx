@@ -13,7 +13,7 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
-function UserDashJobs({ createdAt, user, SAuser, jobs, jobsLoading }) {
+function UserDashJobs({ createdAt, user, jobs, jobsLoading }) {
   const dispatch = useDispatch();
   const [viewType, setViewType] = useState("list");
   // Pagination state
@@ -28,16 +28,13 @@ function UserDashJobs({ createdAt, user, SAuser, jobs, jobsLoading }) {
       if (user) {
         await new Promise((resolve) => setTimeout(resolve, 200)); // Adjust the delay time as needed
         dispatch(getMyJobs());
-      } else if (SAuser) {
-        await new Promise((resolve) => setTimeout(resolve, 200)); // Adjust the delay time as needed
-        dispatch(SAgetMyJobs());
       } else {
         console.error("Unidentified user");
       }
     };
 
     fetchData();
-  }, [user, SAuser, dispatch]);
+  }, [user, dispatch]);
 
   const handleDeleteJob = (jobId) => {
     const confirmDelete = window.confirm(
@@ -47,8 +44,6 @@ function UserDashJobs({ createdAt, user, SAuser, jobs, jobsLoading }) {
       //console.log("Job Delete: ", jobId);
       if (user) {
         dispatch(deleteJob(jobId));
-      } else if (SAuser) {
-        dispatch(SAdeleteJob(jobId));
       } else {
         console.error("Unable to Delete Job");
       }

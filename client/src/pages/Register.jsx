@@ -5,10 +5,11 @@ import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { register, reset } from "../features/auth/authSlice";
 import { Sregister, Sreset } from "../features/students/studentSlice";
-
+import TermsandConditions from "../components/Misc/TermsandConditions";
 import Spinner from "../components/Misc/Spinner";
 import PrivacyPolicyModal from "../components/Misc/PrivacyPolicyModal";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import ReactModal from "react-modal";
 
 function Register() {
   //FormData
@@ -18,6 +19,9 @@ function Register() {
     password: "",
     password2: "",
   });
+  const [isDisabled, setIsDisabled] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const { name, email, password, password2 } = formData;
   const passwordsMatch = password === password2;
 
@@ -28,7 +32,10 @@ function Register() {
   const handleRoleChange = (event) => {
     setSelectedRole(event.target.value);
   };
-
+  // Function to toggle the modal
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
   //hooks
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -50,7 +57,6 @@ function Register() {
   } = useSelector((state) => state.students);
 
   //State Hooks
-  const [isTCOpen, setTCOpen] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
 
@@ -121,14 +127,6 @@ function Register() {
     return validationMessages;
   };
 
-  const openTC = () => {
-    setTCOpen(true);
-  };
-
-  const closeTC = () => {
-    setTCOpen(false);
-  };
-
   //onChange form fields
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -140,7 +138,6 @@ function Register() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    //const termsConditionsCheckbox = document.getElementById("tc");
     // Dispatch the registration action based on the selected role
     if (selectedRole === "poster") {
       // Dispatch the action for poster registration
@@ -149,7 +146,6 @@ function Register() {
         email,
         password,
       };
-      //console.log("is User", userData);
       dispatch(register(userData));
     } else if (selectedRole === "applicant") {
       // Dispatch the action for applicant registration
@@ -158,7 +154,6 @@ function Register() {
         email,
         password,
       };
-      //console.log("is Student", studentData);
       dispatch(Sregister(studentData));
     } else {
       toast.error("Please accept the Privacy Policy before registering.");
@@ -174,6 +169,9 @@ function Register() {
   }
   return (
     <>
+      <ReactModal isOpen={isModalOpen}>
+        <TermsandConditions closeModal={toggleModal} />{" "}
+      </ReactModal>
       <div className="w-full min-h-screen font-Poppins flex justify-center items-center">
         <h1 className="hiddenHSEO">Skillmint Register Page</h1>
         <h2 className="hiddenHSEO">
@@ -285,7 +283,32 @@ function Register() {
             </div>
           )}
           <div className="form-control max-w-[340px] mx-auto my-6">
-            <button className="text-lg font-Poppins tracking-wide bg-black text-white py-3 rounded-[3px] select-none">
+            <span className="mb-2 flex gap-2">
+              <input
+                type="checkbox"
+                className="checkbox ring-black ring-1"
+                onClick={() => {
+                  setIsDisabled(!isDisabled);
+                }}
+              />
+              <label htmlFor="" className="font-Poppins">
+                I agree to the{" "}
+                <button className="font-medium underline" onClick={toggleModal}>
+                  Terms and Conditions
+                </button>{" "}
+                and{" "}
+                <button className="font-medium underline" onClick={toggleModal}>
+                  Privacy Policy
+                </button>
+                .
+              </label>
+            </span>
+            <button
+              className={`text-lg font-Poppins tracking-wide bg-black text-white py-3 rounded-[3px] select-none ${
+                isDisabled ? "disabled bg-black/40" : null
+              }`}
+              disabled={isDisabled}
+            >
               Register
             </button>
           </div>

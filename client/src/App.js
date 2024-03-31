@@ -58,6 +58,7 @@ import NotFound from "./components/NotFound";
 import NotAuthorized from "./components/NotAuthorized";
 import ReactGA from "react-ga4";
 
+ReactGA.initialize(" G-WQW7Z6JY32");
 function App() {
   const [message, setMessage] = useState("");
   const location = useLocation();

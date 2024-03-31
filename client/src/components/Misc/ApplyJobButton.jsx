@@ -37,7 +37,12 @@ const ApplyJobButton = ({
       setIsLoading(true);
       // Check if a profile exists
       //console.log("Before navigate");
-      if (!profiles || profiles.length === 0 || profiles === null) {
+      if (
+        !profiles ||
+        profiles.length === 0 ||
+        profiles === null ||
+        !profiles.ApplicantCV
+      ) {
         // Redirect to DashboardS if no profile is found
         navigate("/DashboardS");
         return; // Stop further execution of the function
@@ -63,6 +68,7 @@ const ApplyJobButton = ({
     isLoading ||
     !profiles ||
     profiles.length === 0 ||
+    !profiles.ApplicantCV ||
     profiles === null;
 
   return (

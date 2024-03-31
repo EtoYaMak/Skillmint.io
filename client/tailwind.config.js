@@ -24,7 +24,7 @@ module.exports = {
     require("@tailwindcss/forms"),
 
     require("tailwind-scrollbar-hide"),
-    require("flowbite/plugin"),
+    //require("flowbite/plugin"),
     require("daisyui"),
   ],
 };

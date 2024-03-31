@@ -54,11 +54,22 @@ function ProfileCard({ profile, onUpdateStatus, job }) {
               </div>
             </div>
             <div>
-              <div className="font-bold">
-                {profile.headerContent.FirstName}{" "}
-                {profile.headerContent.MiddleName}{" "}
-                {profile.headerContent.LastName}
-              </div>
+              {!profile.headerContent.FirstName &&
+              !profile.headerContent.MiddleName &&
+              !profile.headerContent.LastName ? (
+                <>
+                  <div className="font-bold">{profile.studentName}</div>
+                </>
+              ) : (
+                <>
+                  <div className="font-bold">
+                    {profile.headerContent.FirstName}{" "}
+                    {profile.headerContent.MiddleName}{" "}
+                    {profile.headerContent.LastName}
+                  </div>
+                </>
+              )}
+
               <div className="text-sm opacity-90 font-medium">
                 {profile.headerContent.Location}
               </div>
