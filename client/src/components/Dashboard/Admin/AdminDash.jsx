@@ -11,6 +11,7 @@ import {
   getAllUsers,
 } from "../../../features/accounts/accountSlice";
 import AllJobsSA from "./AllJobsSA";
+import UserJobs from "./UserJobs";
 
 function AdminDash() {
   const dispatch = useDispatch();
@@ -130,7 +131,7 @@ function AdminDash() {
         {/* 
         MY JOBS
          */}
-        {active === "jobs" && <UserDashJobs SAuser={SAuser} jobs={jobs} />}
+        {active === "jobs" && <UserJobs SAuser={SAuser} jobs={jobs} />}
         {/* 
         ALL JOBS
          */}

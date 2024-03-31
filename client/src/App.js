@@ -133,7 +133,7 @@ function App() {
           />
           {/* Super */}
           <Route path="/loginAdmin" element={<LoginAdmin />} />
-          {/* <Route path="/registerAdmin" element={<RegisterAdmin />} /> */}
+          <Route path="/registerAdmin" element={<RegisterAdmin />} />
           <Route
             path="/password-reset-admin"
             element={<PasswordResetAdmin />}
