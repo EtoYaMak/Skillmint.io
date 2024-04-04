@@ -5,14 +5,13 @@ const memoryStorage = multer.memoryStorage();
 const multerS3 = require("multer-s3");
 
 // Load environment variables
-const { S3_AWS_ACCESS_KEY_ID, S3_AWS_SECRET_ACCESS_KEY, S3_AWS_REGION } =
-  process.env;
+const { AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION } = process.env;
 
 const s3 = new S3Client({
-  region: S3_AWS_REGION, // Add your AWS region here
+  region: AWS_REGION, // Add your AWS region here
   credentials: {
-    accessKeyId: S3_AWS_ACCESS_KEY_ID,
-    secretAccessKey: S3_AWS_SECRET_ACCESS_KEY,
+    accessKeyId: AWS_ACCESS_KEY_ID,
+    secretAccessKey: AWS_SECRET_ACCESS_KEY,
   },
 });
 const s3upload = multer({

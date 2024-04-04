@@ -12,10 +12,10 @@ const {
 const app = express();
 const NODE_ENV = process.env.NODE_ENV;
 const port = process.env.PORT;
-const IP_ADDRESS = process.env.SERVER_MAIN_ADDRESS;
+const IP_ADDRESS = process.env.AWS_IP_ADDRESS;
 const IP_ADDRESS_BACK = process.env.SERVER_ADDRESS;
 const IP_ADDRESS_FRONT = process.env.SERVER_ADDRESS_FRONT;
-const stripe = require("stripe")(process.env.SKILL_STRIPE_SECRET);
+const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));

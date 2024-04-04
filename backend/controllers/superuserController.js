@@ -5,7 +5,7 @@ const Superuser = require("../models/superuserModel");
 const crypto = require("crypto");
 const nodemailer = require("nodemailer");
 const IP_ADDRESS = process.env.SERVER_ADDRESS_FRONT;
-const AWS_IP = process.env.SERVER_MAIN_ADDRESS;
+const AWS_IP = process.env.AWS_IP_ADDRESS;
 // Initialize Nodemailer transporter
 const transporter = nodemailer.createTransport({
   service: "gmail",
