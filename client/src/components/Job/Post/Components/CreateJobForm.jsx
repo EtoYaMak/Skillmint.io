@@ -11,7 +11,7 @@ import departmentData from "../../../../assets/Departments.json";
 import { toast } from "react-toastify";
 
 let jobPlaceholder =
-  "As a Network Engineer, you will play a crucial role in designing, implementing, and maintaining our organization's network infrastructure. Your responsibilities will include analyzing network requirements, configuring routers and switches, ensuring network security, and troubleshooting connectivity issues. Collaborating with cross-functional teams, you will contribute to the planning and execution of network projects, while staying abreast of industry trends and emerging technologies. The ideal candidate possesses strong problem-solving skills, in-depth knowledge of networking protocols, and a passion for optimizing network performance to support the organization's seamless operations.";
+  "As a [Job Title], you will play a pivotal role in [brief description of primary responsibilities]. You will collaborate with cross-functional teams to [brief description of expected outcomes]. This role offers an exciting opportunity for growth and professional development within a fast-paced and supportive work environment.";
 
 function CreateJobForm() {
   const { formData, updateFormData, isFormValid, setIsFormValid } =
@@ -641,18 +641,24 @@ border-none ring-[1px] ring-[#777] hover:ring-[#000] focus:ring-0 shadow-[0.5px_
                     >
                       {/*    <MdOutlineFileUpload size={45} /> */}
                       <h1
-                        className={`font-Poppins font-bold text-lg sm:text-3xl  text-black/40 group-hover:text-black/60 absolute ${
-                          !fileName ? "" : "max-[640px]:bottom-0"
-                        } sm:flex`}
+                        className={`font-Poppins font-bold  ${
+                          fileName?.name
+                            ? "sm:text-lg overflow-hidden sm:max-w-80 max-h-6 max-w-56"
+                            : ""
+                        }  text-black/40 group-hover:text-black/60 absolute ${
+                          !fileName ? "text-3xl" : "max-[640px]:bottom-0"
+                        } sm:flex `}
                       >
-                        Upload
+                        {previewUrl && previewUrl !== null
+                          ? `${fileName?.name}`
+                          : "Upload"}
                       </h1>
                     </label>
                     <input
                       type="file"
                       name="profileImage"
                       id="profileImage"
-                      className="form-control-file file-input bg-transparent w-full h-full"
+                      className="sr-only form-control-file file-input bg-transparent w-full h-full"
                       onChange={handleFileChange}
                     />
                   </span>

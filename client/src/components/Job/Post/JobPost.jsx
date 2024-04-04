@@ -196,23 +196,23 @@ function JobPost() {
                 <ul className="steps w-[96vw] sm:w-[80vw] max-w-5xl">
                   <li
                     className={`step text-lg ${
-                      currentStep === "jobCreate" ? "step-primary" : ""
+                      currentStep === "jobCreate" ? "step-error" : ""
                     }`}
                   >
                     <p className=" text-xl sm:text-2xl font-semibold">Create</p>
                   </li>
                   <li
                     className={`step text-lg ${
-                      currentStep === "jobPreview" ? "step-primary" : ""
+                      currentStep === "jobPreview" ? "step-error" : ""
                     }`}
                   >
-                    <p className=" text-xl sm:text-2xl font-semibold">
+                    <p className=" text-xl sm:text-2xl font-semibold ">
                       Preview
                     </p>
                   </li>
                   <li
                     className={`step text-lg ${
-                      currentStep === "jobPayment" ? "step-primary" : ""
+                      currentStep === "jobPayment" ? "step-error" : ""
                     }`}
                   >
                     <p className=" text-xl sm:text-2xl font-semibold">

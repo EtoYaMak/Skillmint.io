@@ -52,12 +52,12 @@ const Navbar = () => {
     navigate("/");
   };
   const handleClick = () => {
-    if (user) {
-      navigate("/Dash");
+    if (SAuser) {
+      navigate("/adminDash");
     } else if (student) {
       navigate("/DashboardS");
-    } else if (SAuser) {
-      navigate("/adminDash");
+    } else if (user) {
+      navigate("/Dash");
     } else {
       navigate("/");
     }

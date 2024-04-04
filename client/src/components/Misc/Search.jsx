@@ -19,10 +19,10 @@ export default function SearchComponent({ onSearch }) {
 
   return (
     <div className="flex items-center w-full">
-      <div className="searchInput flex justify-center rounded mx-4 gap-2 w-full relative">
+      <div className="searchInput flex justify-center rounded mx-2 gap-2 w-full relative">
         <input
           type="text"
-          className="w-full font-Poppins rounded-[2em] border-[1px] h-14 pl-12"
+          className="w-full font-Poppins rounded-[2px] border-[1px] h-14 pl-12 text-lg"
           placeholder="Search a job title"
           value={searchQuery}
           onChange={handleInputChange}
@@ -35,8 +35,3 @@ export default function SearchComponent({ onSearch }) {
     </div>
   );
 }
-
-/*           placeholder:tracking-wide tracking-wider text-xl font-Poppins
-          placeholder:opacity-70   rounded-[2em] placeholder:text-[#333]
-           text-[#000] bg-black/10   focus:text-black focus:border-2
-            focus:border-white/5 focus:outline-none bg-[#fff] focus:bg-[#333]/5 */

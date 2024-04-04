@@ -58,31 +58,31 @@ function JobBoardComponent({
               {/* JOB title, company, country, setting */}
               {/*  <div className="flex flex-col select-none py-2 space-y-[0px] sm:space-y-[4px] w-[60vw] sm:w-auto h-full"> */}
               <div className="flex flex-col min-h-full space-y-[0px] sm:space-y-[4px] w-full">
-                <h1 className="font-Poppins text-[14px]  sm:text-[18px] font-semibold sm:font-bold">
+                <p className="font-Poppins text-[14px]  sm:text-[18px] font-semibold sm:font-bold">
                   {job.position}
-                </h1>
-                <h3 className="font-Poppins font-normal sm:font-medium text-[13px] sm:text-[16px] hover:underline text-[#2e2e2e]">
+                </p>
+                <p className="font-Poppins font-normal sm:font-medium text-[13px] sm:text-[16px] hover:underline text-[#2e2e2e]">
                   {job.company}
-                </h3>
+                </p>
                 {/* country setting */}
                 <div className="  text-white select-none gap-[4px] sm:gap-2 flex flex-wrap w-full text-[10px] sm:text-[12px] py-1">
-                  <h1 className="font-Poppins cursor-cell  w-fit bg-[#C83055]  sm:px-[0.50rem] px-[0.3rem]  sm:py-[0.25rem] py-[0.14rem] rounded-[4px]">
+                  <p className="font-Poppins cursor-cell  w-fit bg-[#C83055]  sm:px-[0.50rem] px-[0.3rem]  sm:py-[0.25rem] py-[0.14rem] rounded-[4px]">
                     {job.country}
                     {/* {countryCode} */}
-                  </h1>
+                  </p>
 
                   {job.setting &&
                     job.setting
                       .filter((jobSetting) => jobSetting.value) // Only keep settings with value true
                       .slice(0, 1)
                       .map((jobSetting, index) => (
-                        <h1
+                        <p
                           key={index} //This was missing
                           className="font-Poppins cursor-cell  w-fit bg-[#C83055] rounded-[4px]  sm:px-[0.50rem] px-[0.25rem]  sm:py-[0.25rem] py-[0.14rem]  "
                         >
                           {jobSetting.name.charAt(0).toUpperCase() +
                             jobSetting.name.slice(1)}
-                        </h1>
+                        </p>
                       ))}
                 </div>
               </div>
@@ -91,9 +91,9 @@ function JobBoardComponent({
 
           <div className="bg-transparent max-[640px]:hidden  flex flex-wrap items-start justify-center sm:justify-start gap-1 text-sm text-white h-full w-full sm:w-1/2 max-[450px]:items-center ">
             {job?.featured === true ? (
-              <h1 className="font-Poppins text-[14px] cursor-cell  w-fit text-black font-semibold px-3 py-1 bg-[#ffD500] rounded-[4px] ">
+              <p className="font-Poppins text-[14px] cursor-cell  w-fit text-black font-semibold px-3 py-1 bg-[#ffD500] rounded-[4px] ">
                 Featured
-              </h1>
+              </p>
             ) : null}
 
             {!showDropdown &&
@@ -111,9 +111,9 @@ function JobBoardComponent({
         </div>
         <div className="sm:w-1/6 flex flex-col mr-3 w-fit justify-center  items-center gap-1 ">
           {job?.featured === true ? (
-            <h1 className="font-Poppins min-[640px]:hidden text-[12px] cursor-cell  w-fit text-black font-semibold px-3 py-1 bg-[#ffD500] rounded-[5px] ">
+            <p className="font-Poppins min-[640px]:hidden text-[12px] cursor-cell  w-fit text-black font-semibold px-3 py-1 bg-[#ffD500] rounded-[5px] ">
               Featured
-            </h1>
+            </p>
           ) : null}
           {student && (
             <div className="max-[640px]:h-[24px] min-[640px]:w-[80px] w-24 h-10">

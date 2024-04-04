@@ -221,7 +221,7 @@ function Home() {
           <SearchCat setCategoryFilter={setCategoryFilter} />
           <Location setLocationFilter={setLocationFilter} />
         </div>
-        <div className="flex flex-row min-[425px]:gap-4 gap-2">
+        <div className="flex flex-row min-[425px]:gap-4 gap-2 ">
           <PayRange setSalaryFilter={setSalaryFilter} />
           <SortingFilter handleSortChange={handleSortChange} />
         </div>
@@ -250,7 +250,7 @@ function Home() {
             {FfilteredJobs.length > visibleJobs && (
               <button
                 onClick={showMoreJobs}
-                className="flex justify-center items-center w-[159px] h-[43px] ease-in-out duration-200 bg-[#C83055]  uppercase font-Poppins  px-3 rounded-xl py-2 text-white hover:text-white hover:scale-105 font-bold z-40"
+                className="flex justify-center items-center w-[159px] h-[43px] ease-in-out duration-200 bg-[#C83055]  uppercase font-Poppins  px-3 rounded-[2px] py-2 text-white hover:text-white hover:scale-105 font-bold z-40"
               >
                 Load more
               </button>

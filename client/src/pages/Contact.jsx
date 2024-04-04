@@ -93,9 +93,10 @@ const Contact = () => {
                     id="name"
                     name="name"
                     value={name}
+                    required
                     placeholder="Name"
                     onChange={handleChange}
-                    className="input bg-black/5 text-lg text-black w-full leading-8 transition-colors duration-200 ease-in-out placeholder:text-black/40 "
+                    className="input border border-black/20 focus:border-black/40 bg-transparent rounded-[2px] text-lg text-black w-full leading-8 transition-colors duration-200 ease-in-out placeholder:text-black/40 "
                   />
                 </div>
               </div>
@@ -111,11 +112,11 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
+                    required
                     placeholder="my-email-address@xyz.com"
                     value={email}
                     onChange={handleChange}
-                    className="w-full input bg-black/5 text-lg text-black            
-                      leading-8 transition-colors duration-200 ease-in-out placeholder:text-black/40"
+                    className="input border border-black/20 focus:border-black/40 bg-transparent rounded-[2px] text-lg text-black w-full leading-8 transition-colors duration-200 ease-in-out placeholder:text-black/40 "
                   />
                 </div>
               </div>
@@ -131,16 +132,17 @@ const Contact = () => {
                     id="message"
                     name="message"
                     value={message}
+                    required
                     placeholder="Your Message"
                     onChange={handleChange}
-                    className="textarea textarea-bordered w-full text-black bg-black/5 h-48 leading-6 transition-colors duration-200 ease-in-out text-lg placeholder:text-black/40 "
+                    className="textarea  w-full text-black border border-black/20 focus:border-black/40 bg-transparent rounded-[2px] h-48 leading-6 transition-colors duration-200 ease-in-out text-lg placeholder:text-black/40 "
                   ></textarea>
                 </div>
               </div>
               <div className="p-2 w-full bg-inherit text-center">
                 <button
                   type="submit"
-                  className="btn btn-lg bg-[#1c1f21] hover:bg-[#d0333c] text-zinc-200 text-lg hover:border-white font-semibold hover:text-white min-w-fit max-w-xs w-full h-fit rounded-3xl uppercase transition-colors duration-300 ease-in-out"
+                  className="bg-[#1c1f21] hover:bg-[#d0333c] text-zinc-200 text-lg hover:border-white font-semibold hover:text-white h-fit rounded-[2px] uppercase transition-colors duration-300 ease-in-out py-4 w-1/2"
                   disabled={loading}
                 >
                   {loading ? "Sending..." : "Send"}
@@ -150,9 +152,9 @@ const Contact = () => {
 
             <div className="p-2 w-full pt-8 mt-8 mb-2 border-t border-[#d0333c] text-black/70 font-medium text-center bg-inherit flex flex-col">
               Contact us:
-              <Link className="text-[#000] hover:text-[#d0333c] text-xl bg-transparent border-0 tracking-widest">
+              <p className="text-[#000] hover:text-[#d0333c] text-xl bg-transparent border-0 tracking-widest cursor-text">
                 skillmintofficial@gmail.com
-              </Link>
+              </p>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ import departmentData from "../../../assets/Departments.json";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 let jobPlaceholder =
-  "As a Network Engineer, you will play a crucial role in designing, implementing, and maintaining our organization's network infrastructure. Your responsibilities will include analyzing network requirements, configuring routers and switches, ensuring network security, and troubleshooting connectivity issues. Collaborating with cross-functional teams, you will contribute to the planning and execution of network projects, while staying abreast of industry trends and emerging technologies. The ideal candidate possesses strong problem-solving skills, in-depth knowledge of networking protocols, and a passion for optimizing network performance to support the organization's seamless operations.";
+  "As a [Job Title], you will play a pivotal role in [brief description of primary responsibilities]. You will collaborate with cross-functional teams to [brief description of expected outcomes]. This role offers an exciting opportunity for growth and professional development within a fast-paced and supportive work environment.";
 
 function JobFormAdmin() {
   const [position, setPosition] = useState("");

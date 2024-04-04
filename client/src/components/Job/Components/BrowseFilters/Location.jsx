@@ -81,26 +81,20 @@ function Location({ setLocationFilter }) {
             inputValue
               ? "pl-10 w-full  min-[850px]:w-[200px] "
               : "w-full  min-[850px]:w-[140px]"
-          } font-Poppins rounded-[2em] border-[1px] border-black/40 h-10 sm:h-12 px-4 text-[14px] sm:text-[16px] font-medium text-center hover:bg-[#e1e1e1]`}
+          } font-Poppins rounded-[2px] border-[1px] border-black/40 h-10 sm:h-12 px-4 text-[14px] sm:text-[16px] font-medium text-center hover:bg-[#ececec]`}
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
         />
-        {/*         {inputValue ? (
-          ""
-        ) : (
-          <FaChevronDown
-            className={`absolute right-6 top-1/2 transform -translate-y-1/2 bg-transparent`}
-          />
-        )} */}
+
         <div
-          className={`rolesfilter min-w-[200px] sm:min-w-[300px] w-fit border border-black absolute bg-white z-[99] overflow-y-scroll overflow-hidden max-h-[200px] h-fit text-[14px] sm:text-[16px] px-3 sm:rounded-l-3xl    ${
+          className={`rolesfilter min-w-[200px] sm:min-w-[300px] w-fit border border-black absolute bg-white z-[99] overflow-y-scroll overflow-hidden max-h-[200px] h-fit text-[14px] sm:text-[16px]    ${
             isDropdownVisible ? "" : "hidden"
           }`}
         >
           {countries.map((country) => (
             <div
               key={country.Code}
-              className="font-medium font-Poppins hover:bg-[#e1e1e1] px-2 py-2 sm:py-3 rounded-xl cursor-pointer border-b"
+              className="font-medium font-Poppins hover:bg-[#e1e1e1] px-2 py-2 sm:py-3  cursor-pointer border-b"
               onClick={() => handleLocationSelect(country.Name)}
             >
               {country.Name}

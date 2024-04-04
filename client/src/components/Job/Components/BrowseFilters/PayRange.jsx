@@ -39,7 +39,7 @@ function PayRange({ setSalaryFilter }) {
           selectedRange
             ? "pl-10 w-full min-[850px]:w-[200px]"
             : " w-full min-[850px]:w-[160px]"
-        } font-Poppins rounded-[2em] border-[1px] border-black/40 h-10 sm:h-12 px-4 text-[14px] sm:text-[16px] font-medium hover:bg-[#e1e1e1]/20 text-black/70 `}
+        } font-Poppins rounded-[2px] border-[1px] border-black/40 h-10 sm:h-12 px-4 text-[14px] sm:text-[16px] font-medium hover:bg-[#ececec] text-black/70 `}
       >
         <option value="" hidden disabled className="">
           Salary Range

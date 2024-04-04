@@ -9,6 +9,11 @@
   box-sizing: border-box;
   width: auto;
 }
+
+.steps .step-error:after {
+  background-color: red;
+  color: white;
+}
 .hiddenHSEO {
   position: absolute;
   top: -9999em;

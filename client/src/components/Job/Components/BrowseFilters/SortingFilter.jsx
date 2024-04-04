@@ -11,7 +11,7 @@ function SortingFilter({ handleSortChange }) {
       <div className="relative inline-block w-full">
         <select
           id="sort"
-          className="font-Poppins rounded-[2em] border-[1px] border-black/40 h-10 sm:h-12 px-4 w-full min-[850px]:w-[155px] text-[14px] sm:text-[16px] font-medium hover:bg-[#e1e1e1]/20 "
+          className="font-Poppins rounded-[2px] border-[1px] border-black/40 h-10 sm:h-12 px-4 w-full min-[850px]:w-[155px] text-[14px] sm:text-[16px] font-medium hover:bg-[#ececec]"
           onChange={handleChange}
         >
           <option value="" disabled hidden>
