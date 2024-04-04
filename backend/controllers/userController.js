@@ -5,7 +5,7 @@ const User = require("../models/userModel");
 const crypto = require("crypto");
 const nodemailer = require("nodemailer");
 const IP_ADDRESS = process.env.SERVER_ADDRESS_FRONT;
-const AWS_IP = process.env.AWS_IP_ADDRESS;
+const AWS_IP = process.env.SERVER_MAIN_ADDRESS;
 
 // Initialize Nodemailer transporter
 const transporter = nodemailer.createTransport({
@@ -146,12 +146,12 @@ const loginUser = asyncHandler(async (req, res) => {
   //Check for user email
   const user = await User.findOne({ email });
   // Check if the account is activated
-  if (!user.isActive) {
+  /*   if (!user.isActive) {
     res.status(400);
     throw new Error(
       "Account not activated. Please check your email to activate your account."
     );
-  }
+  } */
   if (user && (await bcrypt.compare(password, user.password))) {
     res.json({
       _id: user.id,
