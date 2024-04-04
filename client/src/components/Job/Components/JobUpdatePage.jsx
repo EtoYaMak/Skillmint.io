@@ -1,12 +1,11 @@
-import React, { Children, useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getJobId, updateJob } from "../../../features/jobs/jobSlice";
 import ReactQuill from "react-quill";
 import "../../../assets/quill.snow.css"; // Import the CSS for the editor
 import countriesList from "../../../assets/countries-data.json";
 import departmentData from "../../../assets/Departments.json";
-import DOMPurify from "dompurify";
 
 //////////////////////////////////
 function JobUpdatePage() {

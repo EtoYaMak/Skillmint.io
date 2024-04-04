@@ -1,10 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import { format, parseISO } from "date-fns";
+import { useEffect, useRef, useState } from "react";
+
 import { RxDash } from "react-icons/rx";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { MdOutlineFileUpload } from "react-icons/md";
-import { IoIosCheckmark } from "react-icons/io";
-import { IoAlertCircleOutline } from "react-icons/io5";
 
 import {
   FaRegImage,
@@ -13,7 +11,6 @@ import {
   FaCloudUploadAlt,
   FaAsterisk,
   FaCheck,
-  FaCheckDouble,
 } from "react-icons/fa";
 import { LuListPlus } from "react-icons/lu";
 import { AiOutlineDelete } from "react-icons/ai";

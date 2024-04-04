@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import countriesData from "../../../assets/countries-data.json";
 function FeaturedCardComp({ job }) {
   const jobId = job._id;

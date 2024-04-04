@@ -1,8 +1,7 @@
-import React from "react";
 import { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-/* import { toast } from "react-toastify"; */
+
 import JobPost from "../components/Job/Post/JobPost";
 const Post = () => {
   const navigate = useNavigate();

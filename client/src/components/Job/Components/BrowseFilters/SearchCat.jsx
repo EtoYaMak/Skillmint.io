@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import departmentsList from "../../../../assets/Departments.json";
-import { FaChevronDown } from "react-icons/fa";
 import { MdOutlineCancel } from "react-icons/md";
 
 function SearchCat({ setCategoryFilter }) {

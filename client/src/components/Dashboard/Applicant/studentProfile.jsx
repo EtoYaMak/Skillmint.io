@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   createProfile,
@@ -8,13 +8,12 @@ import {
 } from "../../../features/profiles/profileSlice";
 
 // Separate component for the profile form
-function ProfileForm({ handleView, handleDownload, profile }) {
+function ProfileForm({ profile }) {
   return (
     <form
       className="space-y-4 px-4 w-full select-none mx-auto font-Poppins h-fit"
       encType="multipart/form-data"
     >
-      {/* Profile form content */}
       {/* EXISTING PROFILE VIEW */}
       <div className="space-y-1 flex flex-col">
         <label className="text-xl  text-black ml-2 font-Poppins ">
@@ -363,13 +362,13 @@ function StudeProfile() {
       ) : activeForm === "updateProfile" && profileExists ? (
         <form
           onSubmit={handleSubmitUpdate}
-          className="space-y-4 px-4 sm:px-0 w-full select-none mx-auto font-Inter"
+          className="space-y-4 px-4 sm:px-0 w-full select-none mx-auto font-Poppins"
           encType="multipart/form-data"
         >
           {/* Your Update Profile Form Content */}
           <form
             onSubmit={handleSubmitUpdate}
-            className="space-y-4 px-1 sm:px-0 w-full  select-none mx-auto font-Inter"
+            className="space-y-4 px-1 sm:px-0 w-full  select-none mx-auto font-Poppins"
             encType="multipart/form-data"
           >
             {/* UPDATE EXISTING PROFILE */}

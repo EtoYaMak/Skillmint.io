@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import countriesList from "../../../../assets/countries-data.json";
-import { FaChevronDown } from "react-icons/fa";
 import { MdOutlineCancel } from "react-icons/md";
 function Location({ setLocationFilter }) {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);

@@ -8,7 +8,7 @@ import {
   RiTwitterFill,
   RiExternalLinkLine,
 } from "react-icons/ri";
-import DOMPurify from "dompurify";
+import { sanitize } from "dompurify";
 import Departments from "../../../../assets/Departments.json";
 
 export default function PreviewJob() {
@@ -146,7 +146,7 @@ function JobPage({ formData }) {
       return formData.department; // Return the custom string if not found in JSON
     }
   };
-  const sanitizedHTML = DOMPurify.sanitize(formData?.description, {
+  const sanitizedHTML = sanitize(formData?.description, {
     USE_PROFILES: { html: true },
   });
   // Modify the HTML content to add the inline style

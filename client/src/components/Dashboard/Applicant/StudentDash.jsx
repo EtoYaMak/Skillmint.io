@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import StudentProfile from "../../Dashboard/Applicant/studentProfile";
 import StudentApplications from "../../Dashboard/Applicant/StudentApplications";
 import StudentProfilePage from "./StudentProfilePage";
 

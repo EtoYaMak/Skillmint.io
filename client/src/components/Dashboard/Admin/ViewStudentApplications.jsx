@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams, useNavigate, Link } from "react-router-dom";
-import {
-  getAllJobsTwo,
-  deleteJob,
-  SAdeleteJob,
-} from "../../../features/jobs/jobSlice";
+import { useParams, useNavigate } from "react-router-dom";
+import { getAllJobsTwo, SAdeleteJob } from "../../../features/jobs/jobSlice";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { FaEdit, FaTrash, FaUsers } from "react-icons/fa";
+
 import { MdGridView, MdCalendarViewDay } from "react-icons/md";
 
 function ViewStudentApplications() {

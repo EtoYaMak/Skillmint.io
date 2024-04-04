@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import UserDashJobs from "../UserDashJobs";
@@ -46,16 +46,6 @@ function UserDash() {
           >
             My Jobs
           </button>
-          {/*           <button
-            className={` px-4 py-2 rounded-3xl ease-in-out duration-200 ${
-              activeTab === "blank"
-                ? "font-bold  text-[#fff] bg-black scale-105"
-                : "text-black/40 bg-transparent hover:bg-black/70 hover:text-white"
-            }`}
-            onClick={() => handleTabClick("blank")}
-          >
-            Blank
-          </button> */}
         </div>
         <div className="w-full mx-auto px-2">
           {/* Pass the user and jobs props to UserDashJobs */}

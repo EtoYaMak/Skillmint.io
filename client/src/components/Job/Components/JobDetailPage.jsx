@@ -1,7 +1,5 @@
-import React from "react";
 import DOMPurify from "dompurify";
-import { useDispatch, useSelector } from "react-redux";
-import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Departments from "../../../assets/Departments.json";
 
 import { Link, useNavigate } from "react-router-dom";

@@ -1,15 +1,13 @@
 import { useState, useContext, useEffect, useRef } from "react";
 import { JobFormContext } from "../JobPost";
-import { useDispatch } from "react-redux";
-import { SAcreateJob } from "../../../../features/jobs/jobSlice";
+
 import DOMPurify from "dompurify";
 import ReactQuill from "react-quill";
-import { MdOutlineFileUpload } from "react-icons/md";
 
 import "../../../../assets/quill.snow.css"; // Import the CSS for the editor
 import countriesList from "../../../../assets/countries-data.json";
 import departmentData from "../../../../assets/Departments.json";
-import { useNavigate } from "react-router-dom";
+
 import { toast } from "react-toastify";
 
 let jobPlaceholder =
@@ -108,7 +106,7 @@ function CreateJobForm() {
   const showToastError = () => {
     toast.error(
       <div className="custom-toast">
-        <p className="custom-toast-text text-lg font-Inter">
+        <p className="custom-toast-text text-lg font-Poppins">
           Fill all required Fields
         </p>
       </div>,

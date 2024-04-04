@@ -1,5 +1,3 @@
-import React from "react";
-
 function ActivationModal({ isOpen, onClose, type }) {
   if (!isOpen) return null;
   const message = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getJobId } from "../../../features/jobs/jobSlice";
 import { useParams } from "react-router-dom";

@@ -1,7 +1,4 @@
 // PrivacyPolicyModal.js
-
-import React from "react";
-
 const PrivacyPolicyModal = ({ isOpen, onClose }) => {
   return (
     <div

@@ -1,7 +1,9 @@
-import React, { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
+
 import { activateAccount, logout, reset } from "../../features/auth/authSlice";
+
 import {
   SAactivateAccount,
   SAlogout,
@@ -18,8 +20,8 @@ const ActivateAccount = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { type, token } = useParams();
-  const [componentLoaded, setComponentLoaded] = React.useState(false);
-  React.useEffect(() => {
+  const [componentLoaded, setComponentLoaded] = useState(false);
+  useEffect(() => {
     setComponentLoaded(true);
   }, []);
   // Single useSelector call to conditionally get the relevant state
@@ -62,7 +64,7 @@ const ActivateAccount = () => {
     [dispatch, navigate, type, token]
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (componentLoaded) {
       if (type === "2") {
         activate(activateAccountS);
@@ -86,5 +88,5 @@ const ActivateAccount = () => {
     </div>
   );
 };
-
-export default React.memo(ActivateAccount);
+export default ActivateAccount;
+//export default React.memo(ActivateAccount);

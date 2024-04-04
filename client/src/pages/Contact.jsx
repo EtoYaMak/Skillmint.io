@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   sendContactFormAsync,
   resetFormState,
 } from "../features/contact/contactSlice";
-import DOMPurify from "dompurify";
+import { sanitize } from "dompurify";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -29,9 +29,9 @@ const Contact = () => {
 
     // Sanitize user input
     const sanitizedFormData = {
-      name: DOMPurify.sanitize(formData.name),
-      email: DOMPurify.sanitize(formData.email),
-      message: DOMPurify.sanitize(formData.message),
+      name: sanitize(formData.name),
+      email: sanitize(formData.email),
+      message: sanitize(formData.message),
     };
 
     dispatch(sendContactFormAsync(sanitizedFormData));

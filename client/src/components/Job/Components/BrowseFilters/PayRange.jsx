@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MdOutlineCancel } from "react-icons/md";
 function PayRange({ setSalaryFilter }) {
   const [selectedRange, setSelectedRange] = useState("");

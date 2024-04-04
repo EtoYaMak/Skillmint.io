@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
-import { FaSignInAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { login, reset } from "../features/auth/authSlice";
 import { Slogin, Sreset } from "../features/students/studentSlice";
-import Spinner from "../components/Misc/Spinner";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -121,9 +118,11 @@ function Login() {
         onSubmit={onSubmit}
         className="mx-auto  sm:max-w-[780px] p-8 pt-12 bg-black/5 rounded-[6px] w-full"
       >
-        <h1 className="bg-transparent font-Poppins leading-[1.4rem] uppercase tracking-tighter text-3xl font-extrabold hover:text-[#d0333c] ease-in-out duration-300 w-fit mx-auto ">
-          Skill <br /> Mint
-        </h1>
+        <Link to="/">
+          <h1 className="bg-transparent font-Poppins leading-[1.4rem] uppercase tracking-tighter text-3xl font-extrabold hover:text-[#d0333c] ease-in-out duration-300 w-fit mx-auto ">
+            Skill <br /> Mint
+          </h1>
+        </Link>
         <h1 className="text-[2.1em] font-Poppins mx-auto my-8 text-center w-full">
           Sign In
         </h1>

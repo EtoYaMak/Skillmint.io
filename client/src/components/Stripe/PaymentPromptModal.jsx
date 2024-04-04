@@ -1,6 +1,4 @@
 // PaymentPromptModal.js
-import React from "react";
-
 const PaymentPromptModal = ({ startPayment }) => {
   return (
     <div className="modal">

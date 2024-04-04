@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { SAdeleteJob } from "../../../features/jobs/jobSlice";
 import { FaEdit, FaUsers, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";

@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import { RiMenu5Fill, RiArrowDownDoubleFill } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";

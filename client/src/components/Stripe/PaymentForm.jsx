@@ -1,13 +1,12 @@
 import {
   CardCvcElement,
-  CardElement,
   CardExpiryElement,
   CardNumberElement,
   useElements,
   useStripe,
 } from "@stripe/react-stripe-js";
 import axios from "axios";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FaAngleLeft } from "react-icons/fa";

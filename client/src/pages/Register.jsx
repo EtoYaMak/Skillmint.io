@@ -6,9 +6,6 @@ import { Link } from "react-router-dom";
 import { register, reset } from "../features/auth/authSlice";
 import { Sregister, Sreset } from "../features/students/studentSlice";
 import TermsandConditions from "../components/Misc/TermsandConditions";
-import Spinner from "../components/Misc/Spinner";
-import PrivacyPolicyModal from "../components/Misc/PrivacyPolicyModal";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import ReactModal from "react-modal";
 
 function Register() {
@@ -57,8 +54,6 @@ function Register() {
   } = useSelector((state) => state.students);
 
   //State Hooks
-  const [showPassword, setShowPassword] = useState(false);
-  const [showPassword2, setShowPassword2] = useState(false);
 
   useEffect(() => {
     if (authIsError || studentsIsError) {
@@ -181,9 +176,11 @@ function Register() {
           onSubmit={onSubmit}
           className="mx-auto sm:max-w-[780px] p-8 pt-12 bg-black/5 rounded-[6px] w-full"
         >
-          <h1 className="select-none bg-transparent font-Poppins leading-[1.4rem] uppercase tracking-tighter text-3xl font-extrabold hover:text-[#d0333c] ease-in-out duration-300 w-fit mx-auto ">
-            Skill <br /> Mint
-          </h1>
+          <Link to="/">
+            <h1 className="select-none bg-transparent font-Poppins leading-[1.4rem] uppercase tracking-tighter text-3xl font-extrabold hover:text-[#d0333c] ease-in-out duration-300 w-fit mx-auto ">
+              Skill <br /> Mint
+            </h1>
+          </Link>
           <h1 className="text-[2.1em] font-Poppins mx-auto my-12 select-none w-fit">
             {selectedRole === "poster" ? "Employer" : " Applicant"} Register
           </h1>
@@ -228,13 +225,13 @@ function Register() {
             {
               label: "Password*",
               name: "password",
-              type: showPassword ? "text" : "password",
+              type: "password",
               autocomplete: "new-password",
             },
             {
               label: "Confirm Password*",
               name: "password2",
-              type: showPassword2 ? "text" : "password",
+              type: "password",
               autocomplete: "new-password",
             },
           ].map((input, index) => (
@@ -249,13 +246,7 @@ function Register() {
                 <input
                   type={input.type}
                   name={input.name}
-                  /*                   value={
-                    input.name === "password"
-                      ? password
-                      : input.name === "password2"
-                      ? password2
-                      : ""
-                  } */ value={formData[input.name]}
+                  value={formData[input.name]}
                   placeholder={`Enter ${input.label.toLowerCase()}`}
                   onChange={onChange}
                   className="w-full text-black bg-white placeholder:text-black/40 text-[14px] py-4 pl-[12px] border rounded-[3px]"

@@ -1,6 +1,4 @@
 // SortingFilter.jsx
-import React from "react";
-
 function SortingFilter({ handleSortChange }) {
   const handleChange = (e) => {
     const selectedValue = e.target.value;
@@ -20,12 +18,8 @@ function SortingFilter({ handleSortChange }) {
             Sort By
           </option>
           <option value="LATEST">Latest Jobs</option>
-          {/*           <option value="popular">Popular</option> */}
           <option value="ASCENDING">A-Z</option>
           <option value="DESCENDING">Z-A</option>
-          {/*           <option value="payhigh">Highest Paid</option>
-          <option value="mostviewed">Most Viewed</option>
-          <option value="mostapplied">Most Applied</option> */}
         </select>
       </div>
     </>

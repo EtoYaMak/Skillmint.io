@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { forgotPassword, SAreset } from "../../features/SAuser/adminSlice";
 
 function PasswordResetAdmin() {

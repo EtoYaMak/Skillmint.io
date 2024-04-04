@@ -1,11 +1,4 @@
-import React, {
-  useState,
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-} from "react";
+import { useState, createContext, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";

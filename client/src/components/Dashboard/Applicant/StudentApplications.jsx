@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchStudentData } from "../../../features/students/studentSlice";
 import { getAllJobs } from "../../../features/jobs/jobSlice";

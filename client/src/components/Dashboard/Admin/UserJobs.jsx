@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux"; // Removed useSelector since it's not used here
-import {
-  SAgetMyJobs,
-  SAdeleteJob,
-  reset,
-} from "../../../features/jobs/jobSlice";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux"; // Removed useSelector since it's not used here
+import { SAgetMyJobs, SAdeleteJob } from "../../../features/jobs/jobSlice";
 import { FaEdit, FaUsers, FaTrash } from "react-icons/fa";
 import { MdGridView, MdCalendarViewDay } from "react-icons/md";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
-function UserJobs({ createdAt, SAuser, jobs, jobsLoading }) {
+function UserJobs({ SAuser, jobs, jobsLoading }) {
   const dispatch = useDispatch();
   const [viewType, setViewType] = useState("list");
   // Pagination state

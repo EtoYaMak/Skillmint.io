@@ -197,7 +197,7 @@ function PackageComponent({
         }`}
       >
         <h1 className="text-2xl font-medium font-Poppins pb-1 ">{type}</h1>
-        <h2 className="text-4xl font-semibold font-Inter  px-2 pt-1 ">
+        <h2 className="text-4xl font-semibold font-Poppins  px-2 pt-1 ">
           {price}
         </h2>
       </span>

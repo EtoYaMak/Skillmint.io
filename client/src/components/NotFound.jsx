@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { TbError404 } from "react-icons/tb";
 

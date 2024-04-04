@@ -1,4 +1,3 @@
-import React from "react";
 import { TbLock } from "react-icons/tb";
 import { Link } from "react-router-dom";
 

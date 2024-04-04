@@ -124,7 +124,7 @@ function RegisterAdmin() {
     <>
       <div className="hero min-h-[91vh] z-1">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left font-Inter">
+          <div className="text-center lg:text-left font-Poppins">
             <h1 className="text-5xl font-bold text-white">Admin Register</h1>
             <p className="py-6 text-xl text-white">Unlock the power</p>
           </div>
@@ -217,14 +217,14 @@ function RegisterAdmin() {
 
                 {/* Password matching feedback */}
                 {password !== "" && password2 !== "" && !passwordsMatch && (
-                  <div className="mt-1 text-white text-xs font-Inter text-center ">
+                  <div className="mt-1 text-white text-xs font-Poppins text-center ">
                     <p className="ml-1 text-white">Passwords do not match</p>
                   </div>
                 )}
 
                 {/* Password validation feedback */}
                 {password !== "" && isPasswordValid(password).length > 0 && (
-                  <div className="text-white text-xs font-Inter toast toast-center">
+                  <div className="text-white text-xs font-Poppins toast toast-center">
                     {isPasswordValid(password).map((message, index) => (
                       <p className="alert bg-red-700 text-white" key={index}>
                         {message}
@@ -238,7 +238,7 @@ function RegisterAdmin() {
                 <button
                   type="submit"
                   className="btn btn-ghost text-[#fff] bg-[#d0333c]/70 hover:bg-[#d0333c] hover:text-[#fff]
-                  flex text-lg font-Inter tracking-wide"
+                  flex text-lg font-Poppins tracking-wide"
                 >
                   Register
                 </button>

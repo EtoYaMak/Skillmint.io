@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { SAcreateJob } from "../../../features/jobs/jobSlice";
-import DOMPurify from "dompurify";
+import { sanitize } from "dompurify";
 import ReactQuill from "react-quill";
 import "../../../assets/quill.snow.css"; // Import the CSS for the editor
 import countriesList from "../../../assets/countries-data.json";
@@ -175,7 +175,7 @@ function JobFormAdmin() {
       <div className="custom-toast">
         {" "}
         {/* Apply your custom styles here */}
-        <p className="custom-toast-text text-lg font-Inter">
+        <p className="custom-toast-text text-lg font-Poppins">
           Oh! Looks like you missed some fields!
         </p>
       </div>,
@@ -193,7 +193,7 @@ function JobFormAdmin() {
   }; */
 
   const handleDescriptionChange = (value) => {
-    const sanitizedValue = DOMPurify.sanitize(value);
+    const sanitizedValue = sanitize(value);
     setDescription(sanitizedValue);
   };
 
@@ -248,7 +248,7 @@ function JobFormAdmin() {
   // Helper function to sanitize input
   const sanitizeInput = (input) => {
     // Use DOMPurify to sanitize the input
-    const sanitizedInput = DOMPurify.sanitize(input);
+    const sanitizedInput = sanitize(input);
 
     return sanitizedInput;
   };

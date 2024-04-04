@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { resetPassword, SAreset } from "../../features/SAuser/adminSlice";
 
 import { toast } from "react-toastify";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
 function PasswordResetAdminForm() {

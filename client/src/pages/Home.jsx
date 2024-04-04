@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllJobs, reset } from "../features/jobs/jobSlice";
-import FeaturedCardComp from "../components/Job/Components/FeaturedCardComp";
 import JobBoardComponent from "../components/Job/Components/JobBoardComponent";
 import SearchComponent from "../components/Misc/Search";
 
@@ -232,7 +231,7 @@ function Home() {
         <>
           {Array.isArray(FfilteredJobs) ? (
             FfilteredJobs.slice(0, visibleJobs).map((job) => (
-              <React.Fragment key={job._id}>
+              <Fragment key={job._id}>
                 <JobBoardComponent
                   job={job}
                   student={student}
@@ -241,7 +240,7 @@ function Home() {
                   user={user}
                   SAuser={SAuser}
                 />
-              </React.Fragment>
+              </Fragment>
             ))
           ) : (
             <p>Loading All Jobs...</p>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
@@ -114,7 +114,7 @@ function Pagination({
 function AllUsers({ alljobs, users, paginatedUsers }) {
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState("");
-  const [currentPage, setCurrentPage] = React.useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
   const SAuser = useSelector((state) => state.SAuser.SAuser);
   const jobs = useSelector((state) => state.jobs.alljobs);
 

@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { resetPassword, reset } from "../../features/auth/authSlice";
 import { resetPasswordS, Sreset } from "../../features/students/studentSlice";
 import { toast } from "react-toastify";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
 function PasswordResetUserForm() {

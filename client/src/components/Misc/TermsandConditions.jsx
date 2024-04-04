@@ -1,5 +1,3 @@
-import React from "react";
-
 function TermsandConditions({ closeModal }) {
   return (
     <div className="z-[99] ">

@@ -6,9 +6,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 
 import Home from "./pages/Home";
-import Browse from "./pages/Browse";
 import Contact from "./pages/Contact";
-import Post from "./pages/Post";
 /* Job Posting Components */
 import JobPost from "./components/Job/Post/JobPost";
 import PreviewJob from "./components/Job/Post/Components/PreviewJob";
@@ -40,9 +38,6 @@ import JobUpdatePage from "./components/Job/Components/JobUpdatePage";
 
 import { useSelector } from "react-redux";
 
-import StripeContainer from "./components/Stripe/StripeContainer";
-
-import JobForm from "./components/Job/Post/JobForm";
 import JobFormAdmin from "./components/Job/Post/JobFormAdmin";
 import AllJobsSA from "./components/Dashboard/Admin/AllJobsSA";
 import AllUsers from "./components/Dashboard/Admin/AllStudents";
@@ -60,11 +55,9 @@ import ReactGA from "react-ga4";
 
 ReactGA.initialize(" G-WQW7Z6JY32");
 function App() {
-  const [message, setMessage] = useState("");
   const location = useLocation();
 
   const user = useSelector((state) => state.auth.user);
-  const SAuser = useSelector((state) => state.SAuser);
   const student = useSelector((state) => state.students.student);
 
   // State to control the modal

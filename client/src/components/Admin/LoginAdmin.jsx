@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { FaSignInAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";

@@ -1,9 +1,8 @@
 // ApplyJobButton.jsx
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { applyToJob } from "../../features/jobs/jobSlice";
 import { fetchStudentData } from "../../features/students/studentSlice";
-import { getProfile } from "../..//features/profiles/profileSlice";
 import { useNavigate } from "react-router-dom";
 const ApplyJobButton = ({
   jobId,
