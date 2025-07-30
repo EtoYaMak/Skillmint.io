@@ -1,70 +1,195 @@
-# Getting Started with Create React App
+# Skillmint Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React.js frontend application for the Skillmint job platform, featuring a responsive design with Tailwind CSS and comprehensive job management functionality.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Responsive Design**: Modern UI built with Tailwind CSS and DaisyUI
+- **User Authentication**: Complete login/register system for employers, students, and admins
+- **Job Management**: Browse, search, filter, and apply for jobs
+- **Dashboard System**: Separate dashboards for employers, students, and admins
+- **Payment Integration**: Stripe payment processing for premium job postings
+- **Real-time Updates**: Redux Toolkit for state management
+- **File Upload**: Profile image and document upload functionality
+- **Email Integration**: Account activation and password reset
+- **Analytics**: Google Analytics 4 integration
 
-### `npm start`
+## 📋 Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js (v14 or higher)
+- npm or yarn
+- Backend API running (see backend README)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Installation
 
-### `npm test`
+1. **Clone the repository**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone <repository-url>
+   cd Skillmint-main/client
+   ```
 
-### `npm run build`
+2. **Install dependencies**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Environment Setup**
+   Create a `.env` file in the client directory with the following variables:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```env
+   REACT_APP_API_URL=http://localhost:4000
+   REACT_APP_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+   REACT_APP_GA_TRACKING_ID=your_google_analytics_id
+   ```
 
-### `npm run eject`
+4. **Start the development server**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📁 Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+client/src/
+├── app/                    # Redux store configuration
+│   └── store.js
+├── components/             # React components
+│   ├── Account/           # Authentication components
+│   ├── Admin/             # Admin-specific components
+│   ├── Dashboard/         # Dashboard components
+│   │   ├── Admin/         # Admin dashboard
+│   │   ├── Applicant/     # Student dashboard
+│   │   └── Employer/      # Employer dashboard
+│   ├── Job/               # Job-related components
+│   │   ├── Components/    # Job display components
+│   │   └── Post/          # Job posting components
+│   ├── Misc/              # Utility components
+│   ├── Navbar.jsx         # Navigation component
+│   ├── Footer.jsx         # Footer component
+│   └── Stripe/            # Payment components
+├── features/              # Redux Toolkit slices
+│   ├── auth/              # Authentication state
+│   ├── jobs/              # Job management state
+│   ├── students/          # Student management state
+│   ├── profiles/          # Profile management state
+│   └── ...
+├── pages/                 # Page components
+│   ├── Home.jsx           # Landing page
+│   ├── Login.jsx          # Login page
+│   ├── Register.jsx       # Registration page
+│   ├── Contact.jsx        # Contact page
+│   └── Post.jsx           # Job posting page
+├── App.js                 # Main application component
+├── App.css                # Application styles
+└── index.js               # Application entry point
+```
 
-## Learn More
+## 🎯 Key Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### For Employers
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Job Posting**: Create and manage job listings
+- **Applicant Management**: View and manage job applications
+- **Dashboard**: Overview of posted jobs and applications
+- **Premium Features**: Enhanced job visibility with payment
 
-### Code Splitting
+### For Students/Applicants
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Job Browsing**: Search and filter available jobs
+- **Application System**: Apply to jobs with profile
+- **Profile Management**: Create and update professional profiles
+- **Application Tracking**: Monitor application status
 
-### Analyzing the Bundle Size
+### For Admins
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **User Management**: Manage all users and students
+- **Job Oversight**: Monitor and manage all job postings
+- **System Administration**: Full platform control
 
-### Making a Progressive Web App
+## 🔧 Key Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **React.js** - Frontend framework
+- **Redux Toolkit** - State management
+- **React Router** - Navigation and routing
+- **Tailwind CSS** - Utility-first CSS framework
+- **DaisyUI** - Component library for Tailwind
+- **Axios** - HTTP client
+- **React Stripe** - Payment processing
+- **React Quill** - Rich text editor
+- **React Icons** - Icon library
+- **React Toastify** - Toast notifications
+- **React Modal** - Modal dialogs
 
-### Advanced Configuration
+## 🎨 UI/UX Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Responsive Design**: Mobile-first approach
+- **Modern Interface**: Clean and intuitive design
+- **Dark/Light Mode**: Theme support
+- **Loading States**: Smooth user experience
+- **Error Handling**: User-friendly error messages
+- **Form Validation**: Real-time validation feedback
 
-### Deployment
+## 🔌 API Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The frontend communicates with the backend API through:
 
-### `npm run build` fails to minify
+- **Axios** for HTTP requests
+- **Redux Toolkit** for state management
+- **JWT tokens** for authentication
+- **File upload** for images and documents
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🚀 Available Scripts
+
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run tests
+- `npm run eject` - Eject from Create React App
+
+## 📱 Responsive Design
+
+The application is fully responsive and optimized for:
+
+- Desktop computers
+- Tablets
+- Mobile phones
+
+## 🔒 Security Features
+
+- JWT token management
+- Secure file uploads
+- Input validation
+- XSS protection
+- CSRF protection
+
+## 📊 Analytics
+
+Google Analytics 4 is integrated to track:
+
+- Page views
+- User interactions
+- Conversion tracking
+- Performance metrics
+
+## 🚀 Deployment
+
+1. **Build the application**
+
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy the `build` folder** to your hosting service
+
+3. **Configure environment variables** for production
+
+## 📄 License
+
+This project is licensed under the MIT License.
